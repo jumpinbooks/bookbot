@@ -1,6 +1,6 @@
 
 def count_num_words(bookstring):
-    wordarray = bookstring.split(" ")
+    wordarray = bookstring.split()
     num_words = 0
     for word in wordarray:
         num_words += 1
