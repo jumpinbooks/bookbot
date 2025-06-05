@@ -1,6 +1,9 @@
+import sys
 from stats import count_num_words
 from stats import count_each_letter
 from stats import dict_to_sorted_list
+
+args = sys.argv
 
 def process_book(path_to_file):
 
@@ -23,6 +26,11 @@ def process_book(path_to_file):
         print("============= END ===============")
 
 def main():
-    process_book("./books/frankenstein.txt")
-    
+    if len(args) == 2:
+        process_book(args[1])
+    else:    
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+#    print(len(args))
 main()
